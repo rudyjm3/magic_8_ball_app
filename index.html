@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <title>Magic 8 Ball</title>
+  <!-- Fonts Google Poopins-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <!-- styles -->
+  <link rel="stylesheet" href="css/_reset.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="body-overlay"></div>
+
+  <div class="main-container" id="main-container">
+    <h2 class="title">Ask the <span>magic 8 ball</span> <span>a</span> question.</h2>
+    <div class="question-section">
+      <input id="user-input" class="user_input" type="text" value="" placeholder="Type your question here..."/><button onClick="shake()" name="button" >ask</button>
+    </div>
+
+    <div class="response-section">
+      <div class="eight-ball-box">
+        <img id="eightball-front" class="eight-ball-front" src="img/magic-8-ball.png" alt="Magic 8 Ball front"></>
+        <!--<div class="eight-ball-back">
+          <p>As I see it Yes!</p>
+          <img id="eightball-back" class="eight-ball-back" src="img/magic-8-ball-answer.png" alt="Magic 8 Ball front"></>
+        </div>-->
+
+      </div>
+
+      <div id="fortune-container">
+        <!--<div id="question-display">
+          <div id="question-asked">
+
+          </div>
+        </div>-->
+        <!--<p>Your Question:</p>
+        <p >What the question was displays here? What the question was displays here?</p> -->
+
+        <!--<div id="fortune">
+          <h2 class="fortune-title hide">Your Fortune</h2>
+          <hr class=" underline hide">
+        </div>-->
+      </div>
+
+      <button id="clear-btn" type="button" name="button" onClick="askAgain()">ask another question</button>
+    </div>
+  </div>
+
+  <!-- javascript -->
+  <script src="js/app.js"></script>
+</body>
+</html>
