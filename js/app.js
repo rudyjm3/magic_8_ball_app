@@ -51,13 +51,17 @@ console.log('I have been clicked!');
   //Remove previous message if it exists
   if(messageText != null){
     messageText.parentNode.removeChild(messageText);
-  };
+  }
+  if(question.length === 0){
+     alert('You did not ask a question');
+     return false;
+  } 
 
 //Make the ball shake by adding the css class
   ball.classList.add("shake");
   //ballBack.classList.add("shake");
 
-  document.getElementById('question-display').innerHTML = `<p class="q-title">Your Question:<br><span class="question">${question}</span></p>`;
+  document.getElementById('question-display').innerHTML = `<p class="q-title">Your Question:<br><span class="question">${question}?</span></p>`;
   console.log(question);
 
   document.getElementById('user-input').value = "";
@@ -101,6 +105,6 @@ function getFortune(){
    document.getElementById('user-input').value = "";
    if(messageText != null){
      messageText.parentNode.removeChild(messageText);
-
+      console.log('Ask again');
    }
  }
